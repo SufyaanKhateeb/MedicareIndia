@@ -1,14 +1,12 @@
 import React from "react";
 import Carousel from "./pageComp/Carousel";
-import DataCard from "../DataCard";
+import InfoCards from "./pageComp/InfoCards";
 
 const Home = () => {
   return (
     <div className="home-container">
       <Carousel />
-      {/* <div style={{margin:"1% 2%"}}>
-        <DataCard />
-      </div> */}
+      <InfoCards />
     </div>
   );
 };
