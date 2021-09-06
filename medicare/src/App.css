@@ -158,12 +158,20 @@ button {
   display: grid;
   max-width: 100vw;
   grid-template-columns: repeat(3, auto);
-  /* justify-content: space-around; */
   grid-gap: 50px;
   grid-row-gap: 20px;
   margin-top: 10px;
-  /* flex-wrap: wrap; */
 }
+
+.category-containerinner {
+  display: grid;
+  justify-content: space-around;
+  grid-gap: 50px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(3, auto);
+  margin: 2% 10%;
+}
+
 .header-service {
   display: flex;
   flex-direction: column;
