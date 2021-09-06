@@ -27,7 +27,7 @@ const Nav = () => {
                         <li className="nav-item">
                             <Link to="/" style={{ textDecoration: "none" }}>
                                 <a className="nav-link active" aria-current="page" href="/">
-                                    Home <i class="bi bi-house-door-fill"></i>
+                                    Home <i className="bi bi-house-door-fill"></i>
                                 </a>
                             </Link>
                         </li>
