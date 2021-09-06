@@ -170,13 +170,6 @@ button {
   grid-row-gap: 20px;
   grid-template-columns: repeat(3, auto);
   margin: 2% 10%;
-  transition: 0.5s all;
-}
-
-.category-containerinner:hover {
-  transform: scale(1.1, 1.1);
-  transition: 0.5s all;
-  cursor: pointer;
 }
 
 .header-service {

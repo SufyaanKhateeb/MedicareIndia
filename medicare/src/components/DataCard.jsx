@@ -19,7 +19,7 @@ const DataCard = ({ hospital, }) => {
           <span className="card-city">{hospital[1]}, {hospital[0]}</span>
           <span className="card-text"></span>
           <span>
-            <h4 className="card-rating">{hospital[12]}/10</h4>
+            <h4 className="card-rating"><i class="bi bi-star"></i> {hospital[12]}/10</h4>
           </span>
           <span><h4>₹{hospital[11]}</h4></span>
           <button className="btn btn-primary">
