@@ -181,3 +181,7 @@ button {
 .card-body{
     padding:5px;
 }
+
+.locationsearch {
+  display: flex;
+}
