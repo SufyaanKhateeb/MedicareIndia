@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoCards = () => {
   return (
-    <div>
+    <div className="infoCardcontainer">
       <div class="infoCard">
         <div class="cardLeft">
           <h2 class="subheading-two">Medical Treatment</h2>
@@ -11,12 +11,12 @@ const InfoCards = () => {
           </p>
         </div>
         <div class="cardRight">
-          <img src="/img/test.jpg" alt="" style={{ height:"340px" }} />
+          <img src="/img/test.jpg" alt="" />
         </div>
       </div>
       <div class="infoCard inverted">
         <div class="invertedcardLeft" >
-          <img src="/img/test.jpg" alt="" style={{ height:"340px" }} />
+          <img src="/img/test.jpg" alt="" />
         </div>
         <div class="invertedcardRight">
           <h2 class="subheading-two">Medical Treatment</h2>

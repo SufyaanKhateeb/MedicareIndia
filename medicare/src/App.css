@@ -76,30 +76,53 @@
   margin-top: 10px;
 }
 
+.infoCardcontainer {
+}
+
 .infoCard {
   position: relative;
-  height: 340px;
-  margin: 100px 0;
+  height: 200px;
+  margin: 50px 0;
   display: flex;
   align-items: center;
+  background-color: rgb(231, 231, 231);
+  opacity: 0.9;
+}
+
+.infoCard p {
+  font-style: italic;
 }
 
 .cardLeft {
   padding: 0 10%;
-  width: 50%;
+  width: 75%;
 }
 
 .invertedcardLeft {
-  max-width: 100%;
-  max-height: 100%;
+  width: 25%;
+  margin-left: 2%;
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+}
+
+.invertedcardLeft img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .cardRight {
-  max-width: 100%;
-  max-height: 100%;
+  width: 25%;
+  margin-right: 2%;
+}
+
+.cardRight img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .invertedcardRight {
   padding: 0 10%;
-  width: 50%;
+  width: 75%;
 }
