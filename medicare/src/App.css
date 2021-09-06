@@ -185,3 +185,10 @@ button {
 .locationsearch {
   display: flex;
 }
+
+.service-container {
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}

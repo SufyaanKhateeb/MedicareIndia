@@ -28,6 +28,13 @@ const Location = () => {
               onChange={(e) => {
                 setInput(e.target.value);
               }}
+              onKeyPress={(e)=>{
+                if(e.key=="Enter"){
+                  setLocation(input);
+                  document.querySelector("#form1").value = "";
+                }
+
+              }}
             />
           </div>
           <button
