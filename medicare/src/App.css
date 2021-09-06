@@ -100,7 +100,7 @@ button {
   transition: 0.5s all;
 }
 
-.dataCardcontainer:hover {
+.card:hover {
   transform: scale(1.1, 1.1);
   transition: 0.5s all;
   cursor: pointer;
@@ -168,4 +168,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card-body{
+    padding:5px;
 }
