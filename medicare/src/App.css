@@ -74,6 +74,7 @@
   border-radius: 10px !important;
   border: 1px solid grey;
   transition: 0.5s all;
+  padding: 10px;
 }
 
 .card-round:hover {
@@ -135,4 +136,10 @@
 .invertedcardRight {
   padding: 0 10%;
   width: 75%;
+}
+
+.header-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

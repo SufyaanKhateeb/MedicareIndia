@@ -6,7 +6,7 @@ const DataCard = ({key,hospital}) => {
       <div class="card  w-75 m-auto" >
         <div class="card-header">{hospital[3]}</div>
         <div class="card-body">
-          <h5 class="card-title">name</h5>
+          <h5 class="card-title">{hospital[2]}</h5>
           <h5 class="card-title">treatment/service</h5>
           <p class="card-text">
             location
