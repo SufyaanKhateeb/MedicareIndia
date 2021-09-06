@@ -18,7 +18,7 @@ const Location = () => {
                 </div>
             </div>
             <div className="Render container">
-
+                            
             </div>
         </div>
     )

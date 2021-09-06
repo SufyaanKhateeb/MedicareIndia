@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
 
 const DataCard = () => {
-    return (
-        <div>
-            
+  return (
+    <div>
+      <div class="card w-75 m-auto" >
+        <div class="card-header">public/private</div>
+        <div class="card-body">
+          <h5 class="card-title">treatment/service</h5>
+          <p class="card-text">
+            location
+          </p>
+          <a href="#" class="btn btn-primary">
+            link to details
+          </a>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default DataCard
+export default DataCard;
