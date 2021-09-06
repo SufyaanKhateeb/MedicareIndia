@@ -12,9 +12,41 @@ const Service = () => {
                 console.log(data);
             })
     }, []);
+    const sources = [
+        "Allergy",
+        "Cardiology",
+        "Cosmetic",
+        "Dental",
+        "Dermathology",
+        "Gas",
+        "General",
+        "Kidneys",
+        "Liver",
+        "Mental",
+        "Neurology",
+        "Ophthalmology",
+        "Orthopedics",
+        "Sleep",
+    ]
     return (
-        <div>
-            
+        <div className="service-container">
+            <div className='header-service'>
+                <h2 style={{textAlign:"center", marginTop:"10px"}}>Medical Treatment</h2>
+                <h4 style={{ textAlign: "center", marginTop: "10px" }}>Categories</h4>
+            </div>
+            <div class="category-container">
+            {    
+                sources.map((source,index)=>{
+                    return (<div class="card card-round" style={{ width: "12rem" }}>
+                        <img src={`/img/serviceImg/${source}.svg`} className="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <p style={{ textAlign: "center" }}>{source}</p>
+                        </div>
+                    </div>);
+                })
+            }   
+                
+            </div>
         </div>
     )
 }
