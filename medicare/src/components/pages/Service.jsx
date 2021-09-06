@@ -164,7 +164,8 @@ const Service = () => {
                                         <DataCard key={index} hospital={hospital} price={price} />
                                     );
                                 }
-                            } else if (
+                            } else {
+                                if (
                                 typeof hospital[9] != typeof true &&
                                 hospital[9].includes(
                                     category.charAt(0).toUpperCase() + category.slice(1)
@@ -173,7 +174,7 @@ const Service = () => {
                             ) {
                                 return <DataCard key={index} hospital={hospital} />;
                             }
-                        })}
+                        }})}
                     </div>
                 </div>
             )}
