@@ -106,7 +106,7 @@ const Service = () => {
             >
               Select Category
             </button>
-
+            
             <div className="input-box">
               less than equal to
               <label htmlFor="price">Cost: {price} (250000-2000000) </label>

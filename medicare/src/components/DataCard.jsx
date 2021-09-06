@@ -17,13 +17,14 @@ const DataCard = ({ hospital }) => {
               alignItems: "flex-start"
             }}
           >
-            <h5 className="card-title">{hospital[2]}</h5>
+            <h4 className="card-title">{hospital[2]}</h4>
             <h6 className="card-subtitle mb-2 text-muted">{hospital[4]}</h6>
             <span className="card-city">{hospital[1]}, {hospital[0]}</span>
             <span className="card-text"></span>
             <span>
-              <h4 className="card-rating">{hospital[12]}/10</h4>
+              <h4 className="card-rating"><i class="bi bi-star"></i> {hospital[12]}/10</h4>
             </span>
+            <span className="card-price"><h4>₹{hospital[11]}</h4></span>
             <button className="btn btn-primary" onClick={() => {
               setFlip(!flip);
             }} >
