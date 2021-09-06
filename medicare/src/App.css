@@ -50,6 +50,7 @@
 }
 
 .category-container{
+    ;
     display: grid;
     justify-content: space-around;
     grid-gap: 20px;
@@ -57,14 +58,29 @@
     margin: 2% 10%;
 }
 
-.card-body{
-    height: 50px;
-}
+
 
 .card-round{
+    cursor: pointer;
     border-radius: 10px !important;
-    border: 1px solid grey;}
-    
+    padding: 10px !important;
+    border: 1px solid grey !important;}
+
 .dataCardcontainer {
     margin-top: 10px;
+}
+
+.service-other-container{
+    margin: 3.5% 5%;
+    
+}
+.service-inner-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
 }

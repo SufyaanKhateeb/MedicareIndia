@@ -25,6 +25,13 @@ const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-lg-0">
                         <li className="nav-item">
+                            <Link to="/" style={{ textDecoration: "none" }}>
+                                <a className="nav-link active" aria-current="page" href="/">
+                                    Home <i class="bi bi-house-door-fill"></i>
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/location" style={{ textDecoration: "none" }}>
                                 <a className="nav-link active" aria-current="page" href="/">
                                     Location
