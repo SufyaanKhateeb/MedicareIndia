@@ -147,3 +147,8 @@
   margin-top: 10px;
   /* flex-wrap: wrap; */
 }
+.header-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
