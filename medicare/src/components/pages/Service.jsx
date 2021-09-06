@@ -90,7 +90,10 @@ const Service = () => {
                         <button className="btn btn-primary" onClick={() => setCatPage(!catPage)}>Select Category</button>
                         <div className="input-box">
                             <label htmlFor="price">Set Range: 250000-2000000</label>
-                            <input id="price" type="range"></input>
+                            <input id="price" type="range" onChange={(e) => {
+                                console.log(e);
+                                
+                            }}></input>
                         </div>
                     </div>
                     <div className="render-container">
