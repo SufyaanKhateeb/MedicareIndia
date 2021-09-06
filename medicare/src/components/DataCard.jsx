@@ -10,7 +10,7 @@ const DataCard = () => {
           <p class="card-text">
             location
           </p>
-          <a href="#" class="btn btn-primary">
+          <a href="/" class="btn btn-primary">
             link to details
           </a>
         </div>
