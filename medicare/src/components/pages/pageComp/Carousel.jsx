@@ -1,3 +1,4 @@
+import { left } from "@popperjs/core";
 import React from "react";
 
 const Carousel = () => {
@@ -33,9 +34,10 @@ const Carousel = () => {
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <img
-                        src="https://www.ayurmade.com/wp-content/uploads/2021/08/666.jpg"
-                        className="d-block w-100"
+                        src="/img/caro11.jpg"
+                        className="d-block "
                         alt="..."
+                        style={{margin:"auto"}}
                     />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
@@ -44,9 +46,10 @@ const Carousel = () => {
                 </div>
                 <div className="carousel-item">
                     <img
-                        src="https://www.ayurmade.com/wp-content/uploads/2021/08/666.jpg"
-                        className="d-block w-100"
+                            src="/img/caro2.jpg"
+                        className="d-block"
                         alt="..."
+                        style={{ margin: "auto" }}
                     />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
@@ -55,9 +58,10 @@ const Carousel = () => {
                 </div>
                 <div className="carousel-item">
                     <img
-                        src="https://www.ayurmade.com/wp-content/uploads/2021/08/666.jpg"
-                        className="d-block w-100"
+                        src="/img/caro3.jpg"
+                        className="d-block"
                         alt="..."
+                        style={{ margin: "auto" }}
                     />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
