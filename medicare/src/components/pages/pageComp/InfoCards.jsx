@@ -3,24 +3,24 @@ import React from "react";
 const InfoCards = () => {
   return (
     <div className="infoCardcontainer">
-      <div class="infoCard">
-        <div class="cardLeft">
-          <h2 class="subheading-two">Medical Treatment</h2>
-          <p class="card-text">
+      <div className="infoCard">
+        <div className="cardLeft">
+          <h2 className="subheading-two">Medical Treatment</h2>
+          <p className="card-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           </p>
         </div>
-        <div class="cardRight">
+        <div className="cardRight">
           <img src="/img/test.jpg" alt="" />
         </div>
       </div>
-      <div class="infoCard inverted">
-        <div class="invertedcardLeft" >
+      <div className="infoCard inverted">
+        <div className="invertedcardLeft" >
           <img src="/img/test.jpg" alt="" />
         </div>
-        <div class="invertedcardRight">
-          <h2 class="subheading-two">Medical Treatment</h2>
-          <p class="card-text">
+        <div className="invertedcardRight">
+          <h2 className="subheading-two">Medical Treatment</h2>
+          <p className="card-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           </p>
         </div>

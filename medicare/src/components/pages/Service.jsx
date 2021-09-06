@@ -5,6 +5,7 @@ import DataCard from '../DataCard';
 const Service = () => {
     const [fetchData, setFetchData] = useState({ data: [] });
     const [service, setService] = useState("");
+    const [price, setPrice] = useState(250000);
     const [flag,setFlag] = useState(false);
     const [category, setCategory] = useState("");
     const [catPage, setCatPage] = useState(true);
@@ -59,6 +60,7 @@ const Service = () => {
                                     setFlag(true);
                                     console.log(flag)
                                     document.querySelector("#form1").value = "";
+                                    
                                     setCatPage(!catPage);
                                 }}
                             >
@@ -68,15 +70,15 @@ const Service = () => {
                     </div>
 
                 </div>
-                <div class="category-container"  >
+                <div className="category-container"  >
                     {
                         sources.map((source, index) => {
-                            return (<div class="card card-round" style={{ width: "12rem" }} onClick={() => {
+                            return (<div className="card card-round" style={{ width: "12rem" }} onClick={() => {
                                 setCatPage(!catPage);
                                 setCategory(source);
                             }}>
                                 <img src={`/img/serviceImg/${source}.svg`} className="card-img-top" alt="..." />
-                                <div class="card-body-service">
+                                <div className="card-body-service">
                                     <p style={{ textAlign: "center" }}>{source}</p>
                                 </div>
                             </div>);
@@ -88,13 +90,18 @@ const Service = () => {
                 <div className="service-other-container">
                     <div className="service-inner-container">
                         <button className="btn btn-primary" onClick={() => setCatPage(!catPage)}>Select Category</button>
+                    
                         <div className="input-box">
                             <label htmlFor="price">Set Range: 250000-2000000</label>
-                            <input id="price" type="range" onChange={(e) => {
-                                console.log(e);
-                                
-                            }}></input>
+                            <input id="price" type="range" onChange={(e)=>{
+                            if(e.target.value !== 0)
+                                setPrice((2000000-250000)*(e.target.value)/100);
+                            }} ></input>
+                        
                         </div>
+                            <button className="btn btn-secondary" onClick={() => {
+
+                            }}>Set</button>
                     </div>
                     <div className="render-container">
                         {
@@ -119,4 +126,3 @@ const Service = () => {
 }
 
 export default Service;
-;

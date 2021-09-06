@@ -44,13 +44,13 @@ const Location = () => {
         </div>
       </div>
       <div className="render-container">
-        {indata.data.map((hospital, index) => {
-          if (location.toLowerCase().includes(hospital[1].toLowerCase())) {
-            // console.log(hospital);
-            return <DataCard key={index} hospital={hospital} />;
-          }
-          return;
-        })}
+        {
+            indata.data.map((hospital, index) => {
+              if (location.toLowerCase().includes(hospital[1].toLowerCase()) || location.toLowerCase().includes(hospital[0].toLowerCase())) {
+                  return <DataCard key={index} hospital={hospital} />; 
+                }
+        })
+        }
       </div>
     </div>
   );

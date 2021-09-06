@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
+import { useSelector } from 'react-redux';
 
 const DataCard = ({ hospital }) => {
   return (
@@ -20,9 +21,9 @@ const DataCard = ({ hospital }) => {
           <span>
             <h4 className="card-rating">{hospital[12]}/10</h4>
           </span>
-          <a href="#" className="btn btn-primary">
+          <button className="btn btn-primary">
             More
-          </a>
+          </button>
         </div>
       </div>
     </div>
