@@ -1,9 +1,10 @@
 import React from 'react';
+import Carousel from './pageComp/Carousel';
 
 const Home = () => {
     return (
-        <div>
-            Home Page
+        <div className="home-container">
+            <Carousel/>
         </div>
     )
 }
