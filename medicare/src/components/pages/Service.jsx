@@ -5,7 +5,7 @@ import DataCard from '../DataCard';
 const Service = () => {
     const [fetchData, setFetchData] = useState({ data: [] });
     const [service, setService] = useState("");
-    const [price, setPrice] = useState(250000);
+    const [price, setPrice] = useState(2000000);
     const [flag,setFlag] = useState(false);
     const [category, setCategory] = useState("");
     const [catPage, setCatPage] = useState(true);
@@ -70,7 +70,7 @@ const Service = () => {
                     </div>
 
                 </div>
-                <div className="category-container"  >
+                <div className="category-container" >
                     {
                         sources.map((source, index) => {
                             return (<div className="card card-round" style={{ width: "12rem" }} onClick={() => {
@@ -99,17 +99,17 @@ const Service = () => {
                             }} ></input>
                         
                         </div>
-                            <button className="btn btn-secondary" onClick={() => {
+                            {/* <button className="btn btn-secondary" onClick={() => {
 
-                            }}>Set</button>
+                            }}>Set</button> */}
                     </div>
-                    <div className="render-container">
+                    <div className="category-containerinner">
                         {
                             fetchData.data.map((hospital, index) => {
                                 if(flag) {
-                                    if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(service.charAt(0).toUpperCase() + service.slice(1))) {
+                                    if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(service.charAt(0).toUpperCase() + service.slice(1)) && hospital[11] <= price) {
                                     
-                                        return <DataCard key={index} hospital={hospital} />;
+                                        return <DataCard key={index} hospital={hospital} price={price} />;
                                     }
                                 }
                                 else if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(category.charAt(0).toUpperCase() + category.slice(1))) {

@@ -27,6 +27,7 @@ export default function App() {
         <Route path="/location" component={Location} />
         <Route path="/aboutus" component={About} />
         <Route path="/service" component={Service} />
+        <Route path="/servicelist" component={} />
         {/* <Route path="/contact" component={Contact} /> */}
         {/* <Route path="" component={Nav} /> */}
         <Route path="/" exact component={Home} />
