@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
+import { useSelector } from 'react-redux';
 
 const DataCard = ({ key, hospital }) => {
+  const [back,setBack] = useState(false);
   return (
     <div className="dataCardcontainer d-inline">
       <div className="card" style={{ width: "18rem", minHeight: "250px" }}>
@@ -19,9 +21,9 @@ const DataCard = ({ key, hospital }) => {
           <span>
             <h4 className="card-rating">{hospital[12]}/10</h4>
           </span>
-          <a href="#" className="btn btn-primary">
+          <button className="btn btn-primary">
             More
-          </a>
+          </button>
         </div>
       </div>
     </div>

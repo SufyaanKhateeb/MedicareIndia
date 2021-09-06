@@ -44,10 +44,8 @@ const Location = () => {
         {
             indata.data.map((hospital, index) => {
               if (location.toLowerCase().includes(hospital[1].toLowerCase()) || location.toLowerCase().includes(hospital[0].toLowerCase())) {
-                  return <DataCard key={index} hospital={hospital} />;
-                  
+                  return <DataCard key={index} hospital={hospital} />; 
                 }
-                return;
         })
         }
       </div>

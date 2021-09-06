@@ -87,22 +87,25 @@ const Service = () => {
                 <div className="service-other-container">
                     <div className="service-inner-container">
                         <button className="btn btn-primary" onClick={() => setCatPage(!catPage)}>Select Category</button>
+                    
                         <div className="input-box">
                             <label htmlFor="price">Set Range: 250000-2000000</label>
                             <input id="price" type="range" onChange={(e)=>{
                             if(e.target.value !== 0)
                                 setPrice((2000000-250000)*(e.target.value)/100);
                             }} ></input>
+                        
                         </div>
+                            <button className="btn btn-secondary" onClick={() => {
+
+                            }}>Set</button>
                     </div>
                     <div className="render-container">
                         {
                             fetchData.data.map((hospital, index) => {
-                                if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(category.charAt(0).toUpperCase() + category.slice(1))) {
-                                    
+                                if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(category.charAt(0).toUpperCase() + category.slice(1)))                                    
                                     return <DataCard key={index} hospital={hospital} />;
-                                    
-                                }
+                                
                             })
                         }
                     </div>
