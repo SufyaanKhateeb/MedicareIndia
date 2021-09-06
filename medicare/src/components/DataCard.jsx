@@ -1,18 +1,26 @@
 import React from "react";
 
-const DataCard = ({hospital}) => {
+const DataCard = ({ key, hospital }) => {
   return (
-    <div className="dataCardcontainer">
-      <div class="card  w-75 m-auto" >
-        <div class="card-header">{hospital[3]}</div>
-        <div class="card-body">
-          <h5 class="card-title">{hospital[2]}</h5>
-          <h5 class="card-title">{hospital[12]}</h5>
-          <p class="card-text">
-            location
-          </p>
-          <a href="/" class="btn btn-primary">
-            link to details
+    <div className="dataCardcontainer d-inline">
+      <div className="card" style={{ width: "18rem", minHeight: "250px" }}>
+        <div
+          className="card-body"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "flex-start"
+          }}
+        >
+          <h5 className="card-title">{hospital[2]}</h5>
+          <h6 className="card-subtitle mb-2 text-muted">{hospital[4]}</h6>
+          <span className="card-text">{hospital[0]}</span>
+          <span>
+            <h4 className="card-rating">{hospital[12]}/10</h4>
+          </span>
+          <a href="#" className="btn btn-primary">
+            More
           </a>
         </div>
       </div>
