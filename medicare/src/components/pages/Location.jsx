@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DataCard from "../DataCard";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../../actions/actions";
 
 const Location = () => {
@@ -13,7 +13,10 @@ const Location = () => {
   const [location, setLocation] = useState("");
   const [input, setInput] = useState("");
   return (
-    <div className="location">
+    <div
+      className="location"
+      style={{ minHeight: "100vh", backgroundImage: "url(/img/test1.jpg)" }}
+    >
       <div className="search-bar">
         <div className="input-group">
           <div className="form-outline">

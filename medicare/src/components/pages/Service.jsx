@@ -6,6 +6,7 @@ const Service = () => {
     const [fetchData, setFetchData] = useState({ data: [] });
     const [service, setService] = useState("");
     const [price, setPrice] = useState(250000);
+    const [flag,setFlag] = useState(false);
     const [category, setCategory] = useState("");
     const [catPage, setCatPage] = useState(true);
     useEffect(() => {
@@ -56,6 +57,8 @@ const Service = () => {
                                 type="button"
                                 className="btn btn-primary"
                                 onClick={() => {
+                                    setFlag(true);
+                                    console.log(flag)
                                     document.querySelector("#form1").value = "";
                                     
                                     setCatPage(!catPage);
@@ -103,9 +106,16 @@ const Service = () => {
                     <div className="render-container">
                         {
                             fetchData.data.map((hospital, index) => {
-                                if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(category.charAt(0).toUpperCase() + category.slice(1)))                                    
+                                if(flag) {
+                                    if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(service.charAt(0).toUpperCase() + service.slice(1))) {
+                                    
+                                        return <DataCard key={index} hospital={hospital} />;
+                                    }
+                                }
+                                else if (typeof (hospital[9]) != typeof (true) && hospital[9].includes(category.charAt(0).toUpperCase() + category.slice(1))) {
+                                    
                                     return <DataCard key={index} hospital={hospital} />;
-                                
+                                }
                             })
                         }
                     </div>

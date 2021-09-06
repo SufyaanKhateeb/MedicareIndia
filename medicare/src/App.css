@@ -6,6 +6,20 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100%;
+}
+
+.location {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+button {
+  background-color: teal !important;
+}
+
 .Carousel-div {
   margin: 10px 25px;
 }
@@ -40,10 +54,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 3%;
+  padding: 3%;
 }
-
-
 
 .input-group button {
   height: 35px;
@@ -85,9 +97,13 @@
 
 .dataCardcontainer {
   margin-top: 10px;
+  transition: 0.5s all;
 }
 
-.infoCardcontainer {
+.dataCardcontainer:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.5s all;
+  cursor: pointer;
 }
 
 .infoCard {
@@ -141,14 +157,15 @@
 .render-container {
   display: grid;
   max-width: 100vw;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
   /* justify-content: space-around; */
-  grid-gap: 10px;
+  grid-gap: 50px;
+  grid-row-gap: 20px;
   margin-top: 10px;
   /* flex-wrap: wrap; */
 }
 .header-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
