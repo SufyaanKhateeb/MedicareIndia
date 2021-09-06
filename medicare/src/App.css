@@ -63,5 +63,8 @@
 
 .card-round{
     border-radius: 10px !important;
-    border: 1px solid grey;
+    border: 1px solid grey;}
+    
+.dataCardcontainer {
+    margin-top: 10px;
 }
