@@ -1,5 +1,6 @@
 import { left } from "@popperjs/core";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Carousel = () => {
     return (
@@ -33,30 +34,37 @@ const Carousel = () => {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
+                
                     <img
                         src="/img/caro11.jpg"
                         className="d-block "
                         alt="..."
                         style={{margin:"auto"}}
+                        href="/location"
                     />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h1>MediCare India!</h1>
+                        <p>Find your trusted clinics and facilities.</p>
                     </div>
+                 
                 </div>
                 <div className="carousel-item">
+                <Link to='/location'>
                     <img
-                            src="/img/caro2.jpg"
+                        src="/img/caro2.jpg"
                         className="d-block"
                         alt="..."
                         style={{ margin: "auto" }}
                     />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h2>Search Hospitals!</h2>
+                        <p>Know about hospitals in top cities.</p>
                     </div>
+                </Link>
                 </div>
+                
                 <div className="carousel-item">
+                <Link to='/service'>
                     <img
                         src="/img/caro3.jpg"
                         className="d-block"
@@ -64,9 +72,10 @@ const Carousel = () => {
                         style={{ margin: "auto" }}
                     />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h1>Get Treatment!</h1>
+                        <p>Choose required diagnosis.</p>
                     </div>
+                </Link>
                 </div>
             </div>
             <button

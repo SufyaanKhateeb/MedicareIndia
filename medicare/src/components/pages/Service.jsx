@@ -94,9 +94,9 @@ const Service = () => {
                         <div className="input-box">
                             <label htmlFor="price">Set Range: 250000-2000000</label>
                             <input id="price" type="range" onChange={(e)=>{
-                            if(e.target.value !== 0)
+                            if(e.target.value !== 0){
                                 setPrice((2000000-250000)*(e.target.value)/100);
-                            }} ></input>
+                            }}} ></input>
                         
                         </div>
                             {/* <button className="btn btn-secondary" onClick={() => {
