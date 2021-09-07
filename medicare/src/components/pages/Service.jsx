@@ -165,7 +165,7 @@ const Service = () => {
                 placeholder={100}
                 onChange={(e) => {
                   if (e.target.value !== 0) {
-                    setPrice(((2000000 - 250000) * e.target.value) / 100);
+                    setPrice((((2000000 - 250000) * e.target.value) / 100)+250000);
                   }
                 }}
               ></input>
