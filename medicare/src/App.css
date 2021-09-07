@@ -62,6 +62,10 @@ button {
   margin-left: 2%;
 }
 
+.search-bar-service{
+  margin: auto;
+}
+
 .category-container {
   display: grid;
   justify-content: space-around;

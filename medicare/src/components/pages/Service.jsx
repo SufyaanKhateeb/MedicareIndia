@@ -49,7 +49,7 @@ const Service = () => {
             <h4 style={{ textAlign: "center", marginTop: "10px", display: "block", width: "100vw" }}>
               Categories
             </h4>
-            <div className="search-bar">
+            <div className="search-bar-service">
               <div className="input-group">
                 <div className="form-outline">
                   <input
