@@ -7,7 +7,7 @@ const DataCard = ({ hospital }) => {
     
     <div className="dataCardcontainer d-inline">
       {flip ? (<div>
-        <div className="card" style={{ width: "18rem", minHeight: "250px" }}>
+        <div className="card" style={{ width: "18rem", minHeight: "300px" }}>
           <div
             className="card-body"
             style={{
