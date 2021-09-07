@@ -43,7 +43,7 @@ const Carousel = () => {
                         href="/location"
                     />
                     <div className="carousel-caption d-none d-md-block">
-                        <h1>MediCare India!</h1>
+                        <h2>MediCare India!</h2>
                         <p>Find your trusted clinics and facilities.</p>
                     </div>
                  
@@ -72,7 +72,7 @@ const Carousel = () => {
                         style={{ margin: "auto" }}
                     />
                     <div className="carousel-caption d-none d-md-block">
-                        <h1>Get Treatment!</h1>
+                        <h2>Get Treatment!</h2>
                         <p>Choose required diagnosis.</p>
                     </div>
                 </Link>
