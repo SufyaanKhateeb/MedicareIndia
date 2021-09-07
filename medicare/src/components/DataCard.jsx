@@ -18,6 +18,7 @@ const DataCard = ({ hospital }) => {
             }}
           >
             <h4 className="card-title">{hospital[2]}</h4>
+            <h6 className="" style={{color : (hospital[3] == "Public") ? "green" : "purple" , border:`2px solid ${(hospital[3] == "Public") ? "green" : "purple"}` , padding:"2px"}}>{hospital[3]}</h6>
             <h6 className="card-subtitle mb-2 text-muted">{hospital[4]}</h6>
             <span className="card-city">{hospital[1]}, {hospital[0]}</span>
             <span className="card-text"></span>

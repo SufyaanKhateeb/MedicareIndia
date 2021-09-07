@@ -5,6 +5,7 @@ import Service from "./components/pages/Service";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import Nav from "./components/pages/pageComp/Nav";
+import Footer from "./components/pages/pageComp/Footer";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import Carousel from "./components/pages/pageComp/Carousel";
@@ -32,6 +33,7 @@ export default function App() {
         {/* <Route path="" component={Nav} /> */}
         <Route path="/" exact component={Home} />
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
