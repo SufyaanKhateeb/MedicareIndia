@@ -214,3 +214,44 @@ button {
   justify-content: space-between ;
   align-items: flex-start;
 }
+
+@media screen and (max-width: 900px){
+  
+.category-containerinner {
+  grid-template-columns: repeat(2, auto);
+  margin: 2% 10%;
+}
+.render-container{
+  grid-template-columns: repeat(2, auto);
+}
+.category-container{
+  grid-template-columns: repeat(2, auto);
+}
+.navbar-nav{
+  text-align: right;
+}
+}
+
+@media screen and (max-width: 650px){
+ 
+.category-containerinner {
+  grid-template-columns: repeat(1, auto);
+  margin: 2% 10%;
+}
+.category-container{
+  grid-template-columns: repeat(1, auto);
+}
+.render-container{
+  grid-template-columns: repeat(1, auto);
+}
+
+}
+
+ 
+
+@media screen and (max-width: 784px){
+ 
+.service-inner-container {
+  flex-direction: column;
+}
+}
