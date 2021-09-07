@@ -48,7 +48,7 @@ const Footer = () => {
 
                 <div className="text-center text-dark p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
                     © 2021 Copyright:
-                    <a className="text-dark" href="#" style={{textDecoration:"none  "}}> Sufyaan and Co.</a>
+                    <a className="text-dark" href="#" style={{textDecoration:"none  "}}> Proessing Minions and Co.</a>
                 </div>
 
             </footer>
