@@ -1,9 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import DataCard from "../DataCard";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "../../actions/actions";
 
 const Service = () => {
-  const [fetchData, setFetchData] = useState({ data: [] });
+  const fetchDatain = useSelector((state) => state.data);
+  const dispatch = useDispatch();
+  // const [fetchData, setFetchData] = useState({ data: [] });
   const [service, setService] = useState("");
   const [price, setPrice] = useState(2000000);
   const [flag, setFlag] = useState(false);
@@ -11,13 +15,16 @@ const Service = () => {
   const [catPage, setCatPage] = useState(true);
   const [input, setInput] = useState("");
   const [location, setLocation] = useState("");
+  // useEffect(() => {
+  //   fetch("https://medicareind-api.herokuapp.com/")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setFetchData(data);
+  //       console.log(data);
+  //     });
+  // }, []);
   useEffect(() => {
-    fetch("https://medicareind-api.herokuapp.com/")
-      .then((res) => res.json())
-      .then((data) => {
-        setFetchData(data);
-        console.log(data);
-      });
+    dispatch(fetchData());
   }, []);
   const sources = [
     "Allergy",
@@ -172,7 +179,7 @@ const Service = () => {
             </div>
           </div>
           <div className="category-containerinner">
-            {fetchData.data.map((hospital, index) => {
+            {fetchDatain.data.map((hospital, index) => {
               if (flag) {
                 if (location == "") {
                   if (

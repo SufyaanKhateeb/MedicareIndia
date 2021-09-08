@@ -49,7 +49,7 @@ const DataCard = ({ hospital }) => {
               <span className="card-city">{hospital[7]}</span>
               
               <span>
-                <h5 className="card-rating"><a target="_blank" href= {`https://${hospital[8]}`} rel="noreferrer">Visit Us</a></h5>
+                <h5 className="card-rating"><a target="_blank" href= {`${hospital[8]}`} rel="noreferrer">Visit Us</a></h5>
               </span>
               <button className="btn btn-primary" onClick={() => {
                 setFlip(!flip);
