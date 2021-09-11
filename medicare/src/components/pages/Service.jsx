@@ -11,6 +11,7 @@ const Service = () => {
   const [service, setService] = useState("");
   const [price, setPrice] = useState(2000000);
   const [flag, setFlag] = useState(false);
+  var flag1 = 0;
   const [category, setCategory] = useState("");
   const [catPage, setCatPage] = useState(true);
   const [input, setInput] = useState("");
@@ -45,15 +46,29 @@ const Service = () => {
   return (
     <div
       className="service-container"
-      style={{ minHeight: "100vh", backgroundImage: "url(/img/test1.jpg)" ,}}
+      style={{ minHeight: "100vh", backgroundImage: "url(/img/test1.jpg)" }}
     >
       {catPage ? (
         <div className="service-outer">
           <div className="header-service">
-            <h2 style={{ textAlign: "center", marginTop: "10px" , display:"block" ,width:"100vw"}}>
+            <h2
+              style={{
+                textAlign: "center",
+                marginTop: "10px",
+                display: "block",
+                width: "100vw",
+              }}
+            >
               Medical Treatment
             </h2>
-            <h4 style={{ textAlign: "center", marginTop: "10px", display: "block", width: "100vw" }}>
+            <h4
+              style={{
+                textAlign: "center",
+                marginTop: "10px",
+                display: "block",
+                width: "100vw",
+              }}
+            >
               Categories
             </h4>
             <div className="search-bar-service">
@@ -69,8 +84,9 @@ const Service = () => {
                     }}
                     onKeyPress={(e) => {
                       if (e.key === "Enter") {
-                          setCatPage(!catPage);
+                        setCatPage(!catPage);
                         setFlag(true);
+                        flag1 = 0; 
                         document.querySelector("#form1").value = "";
                         setLocation(input);
                         document.querySelector("#form1").value = "";
@@ -83,6 +99,7 @@ const Service = () => {
                   className="btn btn-primary"
                   onClick={() => {
                     setFlag(true);
+                    flag1 = 0;
                     console.log(flag);
                     document.querySelector("#form1").value = "";
                     setLocation("");
@@ -103,6 +120,7 @@ const Service = () => {
                   onClick={() => {
                     setCatPage(!catPage);
                     setCategory(source);
+                    flag1 = 0;
                     setFlag(false);
                     setLocation("");
                   }}
@@ -122,13 +140,14 @@ const Service = () => {
         </div>
       ) : (
         <div className="service-other-container">
-        <h2 style={{textAlign:"center"}}>Category : {category}</h2>
+          <h2 style={{ textAlign: "center" }}>Category : {category}</h2>
           <div className="service-inner-container">
             <button
               className="btn btn-primary"
               onClick={() => setCatPage(!catPage)}
-            > Back to
-              Select Category
+            >
+              {" "}
+              Back to Select Category
             </button>
             <div
               className="input-group"
@@ -145,7 +164,7 @@ const Service = () => {
                   }}
                   onKeyPress={(e) => {
                     if (e.key == "Enter") {
-                    console.log(input)
+                      console.log(input);
                       setLocation(input);
                       document.querySelector("#form1").value = "";
                     }
@@ -172,7 +191,9 @@ const Service = () => {
                 placeholder={100}
                 onChange={(e) => {
                   if (e.target.value !== 0) {
-                    setPrice((((2000000 - 250000) * e.target.value) / 100)+250000);
+                    setPrice(
+                      ((2000000 - 250000) * e.target.value) / 100 + 250000
+                    );
                   }
                 }}
               ></input>
@@ -189,6 +210,7 @@ const Service = () => {
                     ) &&
                     hospital[11] <= price
                   ) {
+                    flag1 = 1;
                     return (
                       <DataCard key={index} hospital={hospital} price={price} />
                     );
@@ -207,6 +229,7 @@ const Service = () => {
                         .toLowerCase()
                         .includes(hospital[0].toLowerCase()))
                   ) {
+                    flag1 = 1;
                     return (
                       <DataCard key={index} hospital={hospital} price={price} />
                     );
@@ -221,6 +244,7 @@ const Service = () => {
                     ) &&
                     hospital[11] <= price
                   ) {
+                    flag1 = 1;
                     return <DataCard key={index} hospital={hospital} />;
                   }
                 } else {
@@ -237,11 +261,15 @@ const Service = () => {
                         .toLowerCase()
                         .includes(hospital[0].toLowerCase()))
                   ) {
+                    flag1 = 1;
                     return <DataCard key={index} hospital={hospital} />;
                   }
                 }
               }
             })}
+            {flag1 == 0 && <div />}
+            {flag1 == 0 && <h1 className="nodata">No data found</h1>}
+            {flag1 == 0 && <div />}
           </div>
         </div>
       )}
